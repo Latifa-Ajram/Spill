@@ -46,6 +46,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        omspill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, Omspill.class);
+                startActivity(intent);
+
+            }
+        });
+
 
     }
 }
