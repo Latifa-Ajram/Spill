@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.project1.R;
 import com.example.project1.StartGame;
+import com.example.project1.Preferanse;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +30,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this, StartGame.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+        preferanser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, Preferanse.class);
                 startActivity(intent);
 
             }
