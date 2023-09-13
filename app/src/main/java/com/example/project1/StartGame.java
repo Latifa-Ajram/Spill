@@ -1,7 +1,9 @@
 package com.example.project1;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -88,48 +90,42 @@ public class StartGame extends AppCompatActivity {
 
             }
         });
-        /*
-         Button AvbrytButton = findViewById(R.id.buttonAvbryt);
-        AvbrytButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-
-                if (questions.size() != math_answers.length) {
-
-                    textViewQuestion.setText("Are you sure you want to quit the game?");
 
                        /*int randomIndex = new Random().nextInt(math_questions.length);
                         newArray[randomIndex] = math_questions[randomIndex];
                         textViewQuestion.setText(math_questions[randomIndex]);*/
 
         Button AvbrytButton = findViewById(R.id.buttonAvbryt);
+
         AvbrytButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (questions.size() != math_answers.length) {
-                    // Hvis det er ubesvarte spørsmål, vis en bekreftelsesmelding.
-                    textViewQuestion.setText("Er du sikker på at du vil avslutte spillet? (Ja / Nei)");
-                    AvbrytButton.setText("Ja");
-                    AvbrytButton.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            // Avslutt spillet hvis brukeren bekrefter.
-                            finish();
-                        }
-                    });
+                    // Hvis det er ubesvarte spørsmål, vis en dialogboks.
+                    AlertDialog.Builder builder = new AlertDialog.Builder(StartGame.this);
+                    builder.setMessage("Er du sikker på at du vil avslutte spillet?")
+                            .setPositiveButton("Ja", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    // Avslutt spillet hvis brukeren bekrefter.
+                                    finish();
+                                }
+                            })
+                            .setNegativeButton("Nei", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    // Lukk dialogboksen hvis brukeren velger "Nei".
+                                    dialogInterface.cancel();
+                                }
+                            });
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
                 } else {
-
+                    // Hvis alle spørsmål er besvart, kan du la brukeren fortsette spillet.
                     randomQuestion();
                 }
             }
         });
-
-
-
-
-
-
-
 
         Button knapp2 = findViewById(R.id.button2);
         Intent i = new Intent(this, MainActivity.class);
@@ -139,29 +135,9 @@ public class StartGame extends AppCompatActivity {
             @Override
             public void onClick (View view){
                 startActivity(i);
+                finish();
             }
         });
-
-
-        Button ExitButton = findViewById(R.id.buttonExit);
-        ExitButton.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view){
-
-                if (questions.size() == math_answers.length){
-
-
-                }
-
-            }
-        });
-
-
-
-
-
-
 
     }
 

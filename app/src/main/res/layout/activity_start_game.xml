@@ -132,15 +132,6 @@
         android:gravity="center_horizontal">
 
         <Button
-            android:id="@+id/buttonExit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
-            android:layout_marginRight="40dp"
-            android:gravity="center|center_horizontal|center_vertical"
-            android:text="exit" />
-
-        <Button
             android:id="@+id/buttonAvbryt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -154,7 +145,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="300dp"
             android:gravity="center"
-            android:text="Back" />
+            android:text="Exit" />
     </LinearLayout>
 
     <LinearLayout
