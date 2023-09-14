@@ -55,7 +55,7 @@
         android:backgroundTint="@android:color/holo_orange_light"
         android:onClick="okButton"
         android:layout_marginLeft="20dp"
-        android:text="OK" />
+        android:text="@string/ok" />
 
     <Button
         android:id="@+id/buttonNext"
@@ -69,7 +69,7 @@
         android:layout_toRightOf="@+id/buttonOk"
         android:backgroundTint="@android:color/holo_orange_light"
         android:onClick="nextButton"
-        android:text="Next" />
+        android:text="string/neste" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -93,7 +93,7 @@
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:onClick="seven"
-                android:text="7"
+                android:text="@string/button_7"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -104,7 +104,7 @@
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:onClick="eight"
-                android:text="8"
+                android:text="@string/button_8"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -115,7 +115,7 @@
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:onClick="nine"
-                android:text="9"
+                android:text="@string/button_9"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -133,7 +133,7 @@
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:onClick="four"
-                android:text="4"
+                android:text="@string/button_4"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -144,7 +144,7 @@
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:onClick="five"
-                android:text="5"
+                android:text="@string/button_5"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -155,7 +155,7 @@
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:onClick="six"
-                android:text="6"
+                android:text="@string/button_6"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -173,7 +173,7 @@
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:onClick="one"
-                android:text="1"
+                android:text="@string/button_1"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -184,7 +184,7 @@
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:onClick="two"
-                android:text="2"
+                android:text="@string/button_2"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -195,7 +195,7 @@
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:onClick="three"
-                android:text="3"
+                android:text="@string/button_3"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -214,7 +214,7 @@
                 android:layout_weight="0.5"
                 android:backgroundTint="@android:color/holo_orange_light"
                 android:onClick="clearButton"
-                android:text="clear" />
+                android:text="@string/clear" />
 
             <Button
                 android:id="@+id/btn0"
@@ -223,7 +223,7 @@
                 android:layout_weight="2"
                 android:background="@color/white"
                 android:onClick="zero"
-                android:text="0"
+                android:text="@string/button_0"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
