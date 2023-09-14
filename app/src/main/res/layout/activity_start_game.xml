@@ -7,19 +7,6 @@
     tools:context=".StartGame">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <Button
-            android:id="@+id/buttonAvbryt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tilbake"/>
-
-    </LinearLayout>
-
-
     <TextView
         android:id="@+id/textViewQuestion"
         android:layout_width="wrap_content"
@@ -46,30 +33,62 @@
         android:textSize="25sp" />
 
 
-    <Button
-        android:id="@+id/buttonOk"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextAnswer"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@android:color/holo_orange_light"
-        android:onClick="okButton"
-        android:layout_marginLeft="20dp"
-        android:text="@string/ok" />
+        android:layout_marginTop="250dp"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/buttonNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextAnswer"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="200dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_toRightOf="@+id/buttonOk"
-        android:backgroundTint="@android:color/holo_orange_light"
-        android:onClick="nextButton"
-        android:text="@string/neste" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/buttonOk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="50dp"
+                android:backgroundTint="@android:color/holo_orange_light"
+                android:onClick="okButton"
+                android:text="@string/ok" />
+
+            <Button
+                android:id="@+id/buttonNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/holo_orange_light"
+                android:onClick="nextButton"
+                android:text="@string/neste" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/buttonClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:backgroundTint="@android:color/holo_orange_light"
+                android:onClick="clearButton"
+                android:text="@string/clear" />
+
+            <Button
+                android:id="@+id/buttonAvbryt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:backgroundTint="@android:color/holo_orange_light"
+                android:text="@string/tilbake" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -206,15 +225,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1">
 
-
-            <Button
-                android:id="@+id/buttonClear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:backgroundTint="@android:color/holo_orange_light"
-                android:onClick="clearButton"
-                android:text="@string/clear" />
 
             <Button
                 android:id="@+id/btn0"
