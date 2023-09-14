@@ -69,7 +69,7 @@
         android:layout_toRightOf="@+id/buttonOk"
         android:backgroundTint="@android:color/holo_orange_light"
         android:onClick="nextButton"
-        android:text="string/neste" />
+        android:text="@string/neste" />
 
     <LinearLayout
         android:layout_width="match_parent"
