@@ -6,86 +6,20 @@
     android:background="@drawable/barn3"
     tools:context=".StartGame">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_centerHorizontal="true"
-    android:orientation="horizontal"
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
     android:layout_marginTop="10dp">
-
-
-    <!-- Score -->
-    <LinearLayout
-        android:id="@+id/llScore"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="1">
-
-        <TextView
-            android:id="@+id/textViewScore"
+        <Button
+            android:id="@+id/buttonAvbryt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Score"
-            android:textColor="@color/design_default_color_primary" />
+            android:text="Tilbake" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textColor="@color/design_default_color_primary" />
     </LinearLayout>
-
-    <!-- Life -->
-    <LinearLayout
-        android:id="@+id/llLife"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/llScore"
-        android:orientation="horizontal"
-        android:layout_weight="1">
-
-        <TextView
-            android:id="@+id/textViewLife"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Life"
-            android:textColor="@color/design_default_color_primary" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3"
-            android:textColor="@color/design_default_color_primary" />
-    </LinearLayout>
-
-    <!-- Time -->
-    <LinearLayout
-        android:id="@+id/llTime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/llLife"
-        android:orientation="horizontal"
-        android:layout_weight="1">
-
-        <TextView
-            android:id="@+id/textViewTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Time"
-            android:textColor="@color/design_default_color_primary" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="60"
-            android:textColor="@color/design_default_color_primary" />
-    </LinearLayout>
-
-</LinearLayout>
 
     <!-- Question -->
     <TextView

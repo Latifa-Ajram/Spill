@@ -48,27 +48,28 @@ public class StartGame extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (questions.size() == 0) {
-                    textViewQuestion.setText("no more to answer.");
-                    return;
+
+                if (questions.size() != 0 && questions.size() != math_answers.length) {
+                    int cQuestionInd = questions.get(questions.size() - 1);
+                    String ans = editTextAnswer.getText().toString();
+                    String correctAns = math_answers[cQuestionInd];
+                    if (ans.equals(correctAns)) {
+                        textViewQuestion.setText("Correct!");
+
+                    } else {
+                        textViewQuestion.setText("Incorrect!");
+                    }
+
                 }
-                int cQuestionInd = questions.get(questions.size() - 1);
-                String ans = editTextAnswer.getText().toString();
-                String correctAns = math_answers[cQuestionInd];
-                if (ans.equals(correctAns)) {
-                    textViewQuestion.setText("Correct!");
-                } else {
-                    textViewQuestion.setText("Incorrect!!");
-                }
+
+                else { textViewQuestion.setText("no more Questions to answer!");}
+
             }
 
 
         });
 
-      /*
-        int randomIndex = new Random().nextInt(math_questions.length);
-        newArray[randomIndex] = math_questions[randomIndex];
-        textViewQuestion.setText(math_questions[randomIndex]);*/
+
         Button nextButton = findViewById(R.id.buttonNext);
 
         nextButton.setOnClickListener(new View.OnClickListener() {
@@ -78,29 +79,26 @@ public class StartGame extends AppCompatActivity {
 
                 if (questions.size() == math_answers.length) {
 
-                        textViewQuestion.setText("You have answered all questions");
+                    textViewQuestion.setText("You have answered all questions, go to the main screen");
 
-                       /*int randomIndex = new Random().nextInt(math_questions.length);
-                        newArray[randomIndex] = math_questions[randomIndex];
-                        textViewQuestion.setText(math_questions[randomIndex]);*/
+
                     } else {
                         randomQuestion();
+
                     }
 
 
             }
         });
 
-                       /*int randomIndex = new Random().nextInt(math_questions.length);
-                        newArray[randomIndex] = math_questions[randomIndex];
-                        textViewQuestion.setText(math_questions[randomIndex]);*/
+
 
         Button AvbrytButton = findViewById(R.id.buttonAvbryt);
 
         AvbrytButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (questions.size() != math_answers.length) {
+                if (questions.size() != math_answers.length ) {
                     // Hvis det er ubesvarte spørsmål, vis en dialogboks.
                     AlertDialog.Builder builder = new AlertDialog.Builder(StartGame.this);
                     builder.setMessage("Er du sikker på at du vil avslutte spillet?")
@@ -120,13 +118,16 @@ public class StartGame extends AppCompatActivity {
                             });
                     AlertDialog dialog = builder.create();
                     dialog.show();
-                } else {
-                    // Hvis alle spørsmål er besvart, kan du la brukeren fortsette spillet.
-                    randomQuestion();
                 }
+
+                if(questions.size() == math_answers.length)
+                {
+                    finish();
+                }
+
             }
         });
-
+/*
         Button knapp2 = findViewById(R.id.button2);
         Intent i = new Intent(this, MainActivity.class);
         knapp2.setOnClickListener(new View.OnClickListener()
@@ -138,7 +139,7 @@ public class StartGame extends AppCompatActivity {
                 finish();
             }
         });
-
+*/
     }
 
         void randomQuestion () {
