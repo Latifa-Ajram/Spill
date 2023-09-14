@@ -54,10 +54,10 @@ public class StartGame extends AppCompatActivity {
                     String ans = editTextAnswer.getText().toString();
                     String correctAns = math_answers[cQuestionInd];
                     if (ans.equals(correctAns)) {
-                        textViewQuestion.setText("Correct!");
+                        textViewQuestion.setText("Congratulations. Your Answer is True.");
 
                     } else {
-                        textViewQuestion.setText("Incorrect!");
+                        textViewQuestion.setText("Sorry! Your Answer is Wrong!");
                     }
 
                 }

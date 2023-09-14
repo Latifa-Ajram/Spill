@@ -1,6 +1,30 @@
 <resources>
     <string name="app_name">Project1</string>
 
+    <resources>
+        <!-- Strenger for knappene -->
+        <string name="tilbake">Tilbake</string>
+        <string name="ok">OK</string>
+        <string name="neste">Next</string>
+        <string name="clear">Clear</string>
+
+        <!-- Strenger for hint og tekstvisning -->
+        <string name="hint_answer">Please Write Your Answer Here</string>
+        <string name="default_text_view_text">TextView</string>
+
+        <!-- Strenger for tallknappene -->
+        <string name="button_0">0</string>
+        <string name="button_1">1</string>
+        <string name="button_2">2</string>
+        <string name="button_3">3</string>
+        <string name="button_4">4</string>
+        <string name="button_5">5</string>
+        <string name="button_6">6</string>
+        <string name="button_7">7</string>
+        <string name="button_8">8</string>
+        <string name="button_9">9</string>
+
+    </resources>
 
 
 
