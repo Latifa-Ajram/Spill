@@ -14,4 +14,26 @@
         <item>3</item>
         <!-- Legg til flere svar her -->
     </string-array>
+
+
+    <!-- Preferanser -->
+    <string-array name="spraakValg">
+        <item>@string/norsk</item>
+        <item>@string/tysk</item>
+        <item>@string/svensk</item>
+
+    </string-array>
+
+    <string-array name="spraak_values">
+        <item>@string/no</item>
+        <item>@string/de</item>
+        <item>@string/sv</item>
+    </string-array>
+
+    <string-array name="antallSporsmaal">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+    </string-array>
+
 </resources>
