@@ -2,6 +2,7 @@ package com.example.project1;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-public class StartGame extends AppCompatActivity {
+public class StartGame extends AppCompatActivity implements MinDialog.MittInterface {
 
     String[] math_questions;
     String[] math_answers;
@@ -25,6 +26,27 @@ public class StartGame extends AppCompatActivity {
     TextView editTextAnswer, textViewQuestion;
 
     ArrayList<Integer> questions;
+
+    @Override
+    public void onYesClick() {
+        finish();
+    }
+    @Override
+    public void onNoClick() {
+        return;
+    }
+
+    public void visDialog(View v)
+    {
+        DialogFragment dialog = new MinDialog();
+        dialog.show(getSupportFragmentManager(),"Tittel");
+    }
+    public void svarDialog(View v)
+    {
+        DialogFragment dialog = new MinDialog();
+        dialog.show(getSupportFragmentManager(),"SvarDialog");
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,9 +82,11 @@ public class StartGame extends AppCompatActivity {
                     String ans = editTextAnswer.getText().toString();
                     String correctAns = math_answers[cQuestionInd];
                     if (ans.equals(correctAns)) {
+                        svarDialog(view);
                         textViewQuestion.setText("Congratulations. Your Answer is True.");
 
                     } else {
+                        svarDialog(view);
                         textViewQuestion.setText("Sorry! Your Answer is Wrong!");
                     }
 
@@ -105,6 +129,10 @@ public class StartGame extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (questions.size() != receivedNumber ) {
+
+                    visDialog(view);
+
+                    /*
                     // Hvis det er ubesvarte spørsmål, vis en dialogboks.
                     AlertDialog.Builder builder = new AlertDialog.Builder(StartGame.this);
                     builder.setMessage("Er du sikker på at du vil avslutte spillet?")
@@ -123,7 +151,7 @@ public class StartGame extends AppCompatActivity {
                                 }
                             });
                     AlertDialog dialog = builder.create();
-                    dialog.show();
+                    dialog.show();*/
                 }
 
                 if(questions.size() == receivedNumber)
