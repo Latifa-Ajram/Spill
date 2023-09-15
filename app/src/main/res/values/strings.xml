@@ -30,6 +30,9 @@
 
 
 
+
+
+
     <!-- Preferanser-->
 
     <string name="norsk">Norsk</string>
@@ -39,7 +42,6 @@
     <string name="no">no</string>
     <string name="de">de</string>
     <string name="sv">sv</string>
-
 
 
 </resources>

@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Project1</string>
-    <string name="tilbake">tillbaka</string>
+    <string name="app_name">Project</string>
+    <string name="tilbake">zurück</string>
 
 
 
@@ -25,6 +26,5 @@
     <string name="no">no</string>
     <string name="de">de</string>
     <string name="sv">sv</string>
-
 
 </resources>

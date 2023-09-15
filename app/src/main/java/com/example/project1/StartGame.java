@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,11 @@ public class StartGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_game);
 
+        SharedPreferences sharedPreferences = getSharedPreferences("myPref", MODE_PRIVATE);
+
+// Retrieve the number using the same key
+        int receivedNumber = sharedPreferences.getInt("antall", 5);
+
         editTextAnswer = findViewById(R.id.editTextAnswer);
         textViewQuestion = findViewById(R.id.textViewQuestion);
 
@@ -49,7 +55,7 @@ public class StartGame extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                if (questions.size() != 0 && questions.size() != math_answers.length) {
+                if (questions.size() != 0 && questions.size() != receivedNumber) {
                     int cQuestionInd = questions.get(questions.size() - 1);
                     String ans = editTextAnswer.getText().toString();
                     String correctAns = math_answers[cQuestionInd];
@@ -77,7 +83,7 @@ public class StartGame extends AppCompatActivity {
             public void onClick(View view) {
                 clearButton(editTextAnswer);
 
-                if (questions.size() == math_answers.length) {
+                if (questions.size() == receivedNumber) {
 
                     textViewQuestion.setText("You have answered all questions, go to the main screen");
 
@@ -98,7 +104,7 @@ public class StartGame extends AppCompatActivity {
         AvbrytButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (questions.size() != math_answers.length ) {
+                if (questions.size() != receivedNumber ) {
                     // Hvis det er ubesvarte spørsmål, vis en dialogboks.
                     AlertDialog.Builder builder = new AlertDialog.Builder(StartGame.this);
                     builder.setMessage("Er du sikker på at du vil avslutte spillet?")
@@ -120,7 +126,7 @@ public class StartGame extends AppCompatActivity {
                     dialog.show();
                 }
 
-                if(questions.size() == math_answers.length)
+                if(questions.size() == receivedNumber)
                 {
                     finish();
                 }
@@ -163,9 +169,7 @@ public class StartGame extends AppCompatActivity {
             printAns("1");
         }
 
-        public void two (View view){
-            printAns("2");
-        }
+        public void two (View view) { printAns("2"); }
 
         public void three (View view){
             printAns("3");
