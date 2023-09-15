@@ -52,7 +52,9 @@
                 android:layout_marginRight="50dp"
                 android:layout_marginBottom="50dp"
                 android:backgroundTint="@android:color/holo_orange_light"
+                android:drawableLeft="@android:drawable/ic_media_play"
                 android:onClick="okButton"
+                android:padding="10dp"
                 android:text="@string/ok" />
 
             <Button
@@ -61,7 +63,9 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/holo_orange_light"
                 android:onClick="nextButton"
-                android:text="@string/neste" />
+                android:text="@string/neste"
+                android:padding="10dp"
+                android:drawableLeft="@android:drawable/ic_media_next"/>
         </LinearLayout>
 
         <LinearLayout
@@ -76,7 +80,9 @@
                 android:layout_marginLeft="80dp"
                 android:backgroundTint="@android:color/holo_orange_light"
                 android:onClick="clearButton"
-                android:text="@string/clear" />
+                android:text="@string/clear"
+                android:padding="10dp"
+                android:drawableLeft="@android:drawable/ic_media_previous"/>
 
             <Button
                 android:id="@+id/buttonAvbryt"
@@ -84,7 +90,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:backgroundTint="@android:color/holo_orange_light"
-                android:text="@string/tilbake" />
+                android:text="@string/tilbake"
+                android:padding="10dp"
+                android:drawableLeft="@android:drawable/ic_media_previous"/>
 
         </LinearLayout>
 
@@ -95,6 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="10dp">
