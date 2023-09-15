@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -57,6 +58,7 @@ public class StartGame extends AppCompatActivity implements MinDialog.MittInterf
 
 // Retrieve the number using the same key
         int receivedNumber = sharedPreferences.getInt("antall", 5);
+        Log.d("recievednr", String.valueOf(receivedNumber));
 
         editTextAnswer = findViewById(R.id.editTextAnswer);
         textViewQuestion = findViewById(R.id.textViewQuestion);
