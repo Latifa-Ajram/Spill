@@ -9,6 +9,11 @@ import androidx.fragment.app.DialogFragment;
 
 public class MinDialog extends DialogFragment {
     private MittInterface callback;
+    public String tittel;
+
+    public MinDialog(String title) {
+        tittel= title;
+    }
 
     public interface MittInterface{
         public void onYesClick();
@@ -29,7 +34,7 @@ public class MinDialog extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         return new
-                AlertDialog.Builder(getActivity()).setTitle(R.string.tittel).setPositiveButton(R.string.Ja, new DialogInterface.OnClickListener() {
+                AlertDialog.Builder(getActivity()).setTitle(tittel).setPositiveButton(R.string.Ja, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
                                 callback.onYesClick();
                             }
@@ -41,6 +46,8 @@ public class MinDialog extends DialogFragment {
                         })
                 .create();
     }
+
+
 
 
 }

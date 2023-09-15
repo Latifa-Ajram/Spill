@@ -23,7 +23,7 @@ public class StartGame extends AppCompatActivity implements MinDialog.MittInterf
     String[] math_questions;
     String[] math_answers;
 
-    TextView editTextAnswer, textViewQuestion;
+    TextView editTextAnswer, textViewQuestion,dialogTitle,dialogInput;
 
     ArrayList<Integer> questions;
 
@@ -38,12 +38,12 @@ public class StartGame extends AppCompatActivity implements MinDialog.MittInterf
 
     public void visDialog(View v)
     {
-        DialogFragment dialog = new MinDialog();
+        DialogFragment dialog = new MinDialog("Er du sikker på at du vil avslutte spillet?");
         dialog.show(getSupportFragmentManager(),"Tittel");
     }
-    public void svarDialog(View v)
+    public void svarDialog(View v, String melding)
     {
-        DialogFragment dialog = new MinDialog();
+        DialogFragment dialog = new MinDialog(melding);
         dialog.show(getSupportFragmentManager(),"SvarDialog");
     }
 
@@ -77,22 +77,66 @@ public class StartGame extends AppCompatActivity implements MinDialog.MittInterf
             public void onClick(View view) {
 
 
+
                 if (questions.size() != 0 && questions.size() != receivedNumber) {
                     int cQuestionInd = questions.get(questions.size() - 1);
                     String ans = editTextAnswer.getText().toString();
                     String correctAns = math_answers[cQuestionInd];
+
                     if (ans.equals(correctAns)) {
-                        svarDialog(view);
-                        textViewQuestion.setText("Congratulations. Your Answer is True.");
+                        // For the "Correct" case
+                        AlertDialog.Builder builder = new AlertDialog.Builder(StartGame.this);
+                        builder.setTitle("Congratulations. Your Answer is Correct:")
+                                .setMessage(math_questions[cQuestionInd] + " = " + correctAns)
+                                .setPositiveButton(R.string.Ja, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        // Handle the OK button click here (if needed)
+                                        dialog.dismiss(); // Dismiss the dialog
+                                    }
+                                })
+                                .show();
 
                     } else {
-                        svarDialog(view);
-                        textViewQuestion.setText("Sorry! Your Answer is Wrong!");
+                        // For the "Incorrect" case
+                        AlertDialog.Builder builder = new AlertDialog.Builder(StartGame.this);
+                        builder.setTitle("Incorrect! Correct answer:")
+                                .setMessage(math_questions[cQuestionInd] + " = " + correctAns)
+                                .setPositiveButton(R.string.Ja, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        // Handle the OK button click here (if needed)
+                                        dialog.dismiss(); // Dismiss the dialog
+                                    }
+                                })
+                                .show();
+
                     }
 
+
+
+/*
+                    if (ans.equals(correctAns)) {
+                        dialogTitle.setText("Congratulations. Your Answer is Correct:");
+                        dialogInput.setText( math_questions[cQuestionInd]+" = "+correctAns);
+                        setContentView(R.layout.custom_dialog);
+
+                        Button dialogButton = findViewById(R.id.dialogButton);
+                        dialogButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                return;
+                            }
+                        });
+                       // svarDialog(view,"Congratulations. Your Answer is Correct: "+ math_questions[cQuestionInd]+" = "+correctAns);
+
+
+                    } else {
+                        svarDialog(view,"Incorrect! Correct answer: "+ math_questions[cQuestionInd]+" = "+correctAns);
+
+                    }
+*/
                 }
 
-                else { textViewQuestion.setText("no more Questions to answer!");}
+                else { svarDialog(view,"no more Questions to answer! Go back ");}
 
             }
 
@@ -109,7 +153,7 @@ public class StartGame extends AppCompatActivity implements MinDialog.MittInterf
 
                 if (questions.size() == receivedNumber) {
 
-                    textViewQuestion.setText("You have answered all questions, go to the main screen");
+                    svarDialog(view,"You have answered all questions, go to the main screen");
 
 
                     } else {
