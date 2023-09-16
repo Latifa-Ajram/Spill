@@ -101,7 +101,7 @@ public class StartGame extends AppCompatActivity implements MinDialog.MittInterf
                     } else {
                         // For the "Incorrect" case
                         AlertDialog.Builder builder = new AlertDialog.Builder(StartGame.this);
-                        builder.setTitle("Incorrect! Correct answer:")
+                        builder.setTitle("Sorry your answer was not correct! Correct answer:")
                                 .setMessage(math_questions[cQuestionInd] + " = " + correctAns)
                                 .setPositiveButton(R.string.Ja, new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
