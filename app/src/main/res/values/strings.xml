@@ -24,6 +24,9 @@
     <string name="button_8">8</string>
     <string name="button_9">9</string>
 
+    <!-- Strenger for omspill-->
+    <style name="omspill">omspill </style>
+    <style name="regel"> Regler </style>
 
 
     <string name="tittel"> </string>
@@ -49,6 +52,9 @@
     <string name="no">no</string>
     <string name="de">de</string>
     <string name="sv">sv</string>
+    <string name="regel" />
+    <string name="omspill" />
+    <string name="instillinger" />
 
 
 </resources>
