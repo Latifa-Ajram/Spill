@@ -34,6 +34,16 @@ public class Omspill extends AppCompatActivity {
                         "For å endre antall spørsmål trykk på 'Preferanser', samt kan du endre språk til tysk ";
                 omspill.setText(" "+ om);
 
+        Button AvbrytButton = findViewById(R.id.buttonAvbryt);
+
+        AvbrytButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+
+
+            }
+        });
 
     }
 
