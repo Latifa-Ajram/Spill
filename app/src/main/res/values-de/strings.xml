@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Project</string>
+
+    <!-- Strenger for knappene -->
     <string name="tilbake">zurück</string>
+    <string name="ok">OK</string>
+    <string name="neste">nächste</string>
+    <string name="clear">Löschen</string>
+    <string name="start">Starten</string>
+    <string name="omSpillet">Über das Spiel</string>
+    <string name="preferanser">Einstellungen</string>
 
 
 
