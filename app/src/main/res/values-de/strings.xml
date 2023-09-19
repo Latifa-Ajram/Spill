@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Project</string>
+    <string name="app_name">Mattespill</string>
 
     <!-- Strenger for knappene -->
     <string name="tilbake">zurück</string>
@@ -17,17 +17,32 @@
     <!-- Strenger for  tekstvisning -->
     <string name="hint_answer">Bitte hier Ihre Antwort eingeben</string>
     <string name="default_text_view_text">TextView</string>
-    <string name="Hvordan_bruke_spillet">Wie man das Spiel benutzt</string>
-    <string name="Hvordan_bruke_spillet_beskrivelse"><![CDATA[In diesem Spiel werden Ihnen 5 zufällige Matheaufgaben angezeigt. Geben Sie Ihre Antwort im Feld ein und klicken Sie auf "OK". Sie erhalten eine Rückmeldung, ob Ihre Antwort korrekt war oder nicht. Klicken Sie auf "Weiter", um das Spiel fortzusetzen. Nachdem alle Aufgaben beantwortet wurden, erhalten Sie eine Benachrichtigung. Um die Anzahl der Fragen zu ändern, klicken Sie auf "Einstellungen". Dort können Sie auch die Sprache auf Deutsch umstellen.]]></string>
+    <string name="hvordan_bruke_spillet">Wie man das Spiel benutzt</string>
+    <string name="hvordan_bruke_spillet_beskrivelse"><![CDATA[In diesem Spiel werden Ihnen 5 zufällige Matheaufgaben angezeigt. Geben Sie Ihre Antwort im Feld ein und klicken Sie auf "OK". Sie erhalten eine Rückmeldung, ob Ihre Antwort korrekt war oder nicht. Klicken Sie auf "Weiter", um das Spiel fortzusetzen. Nachdem alle Aufgaben beantwortet wurden, erhalten Sie eine Benachrichtigung. Um die Anzahl der Fragen zu ändern, klicken Sie auf "Einstellungen". Dort können Sie auch die Sprache auf Deutsch umstellen.]]></string>
+    <string name="tilbakeText">Er du sikker på at du vil avslutte spillet?</string>
+    <string name="defaultsporsmaal">5</string>
+    <string name="riktigSvarMelding">gratulerer, du har svart riktig.</string>
+    <string name="feilSvarMelding">Beklager feil svar. riktig svar er:</string>
+    <string name="ingenSporsmaal">Det er ikke flere spørsmål. Gå tilbake! </string>
+
+
+    <!-- Strenger for tallknappene -->
+    <string name="button_0">0</string>
+    <string name="button_1">1</string>
+    <string name="button_2">2</string>
+    <string name="button_3">3</string>
+    <string name="button_4">4</string>
+    <string name="button_5">5</string>
+    <string name="button_6">6</string>
+    <string name="button_7">7</string>
+    <string name="button_8">8</string>
+    <string name="button_9">9</string>
 
 
 
-
-
-
-
-
-
+    <!-- Strenger for omspill-->
+    <style name="omspill">omspill </style>
+    <style name="regel"> Regler </style>
 
 
 
@@ -42,10 +57,9 @@
 
     <string name="norsk">Norsk</string>
     <string name="tysk">Tysk</string>
-    <string name="svensk">Svensk</string>
+
 
     <string name="no">no</string>
     <string name="de">de</string>
-    <string name="sv">sv</string>
 
 </resources>

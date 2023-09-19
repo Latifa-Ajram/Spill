@@ -23,29 +23,29 @@
             android:gravity="center"
             android:padding="20dp"
             android:textSize="32sp"
-            android:text="@string/regel"
+            android:text="@string/hvordan_bruke_spillet"
             android:textStyle="bold"/>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="549dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_weight="1"> <!-- Øker toppmargen for å heve teksten -->
 
         <TextView
             android:id="@+id/textViewOmspill"
-            android:layout_width="376dp"
-            android:layout_height="400dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="10dp"
             android:background="@android:color/transparent"
             android:gravity="center_vertical"
             android:lineSpacingExtra="32dp"
-            android:text="@string/omspill"
+            android:text="@string/hvordan_bruke_spillet_beskrivelse"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold" />

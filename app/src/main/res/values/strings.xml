@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">Project1</string>
+    <string name="app_name">Mattespill</string>
 
 
     <!-- Strenger for knappene -->
     <string name="tilbake">Tilbake</string>
     <string name="ok">OK</string>
-    <string name="neste">Next</string>
-    <string name="clear">Clear</string>
+    <string name="neste">Neste</string>
+    <string name="clear">slett</string>
     <string name="start">Start</string>
     <string name="omSpillet">Om Spill</string>
     <string name="preferanser">Preferanser</string>
@@ -16,10 +16,15 @@
 
 
     <!-- Strenger for  tekstvisning -->
-    <string name="hint_answer">Please Write Your Answer Here</string>
-    <string name="default_text_view_text">TextView</string>
-    <string name="Hvordan_bruke_spillet">Hvordan bruke spillet</string>
-    <string name="Hvordan_bruke_spillet_beskrivelse"><![CDATA[I dette spillet får du opp 5 tilfeldige regnestykker , skriv svaret ditt på feltet og trykk ok du vil få en tilbakemelding om ditt svar var korrekt eller ikke. trykk next for å fortsette spillet ,når alle regenstykkene er besvart vil du få beskjed om det.For å endre antall spørsmål trykk på Preferanser, samt kan du endre språk til tysk.]]></string>
+    <string name="hint_answer">Skriv ditt svar her</string>
+    <string name="default_text_view_text"></string>
+    <string name="hvordan_bruke_spillet">Hvordan bruke spillet</string>
+    <string name="hvordan_bruke_spillet_beskrivelse"><![CDATA[I dette spillet får du opp 5 tilfeldige regnestykker , skriv svaret ditt på feltet og trykk ok du vil få en tilbakemelding om ditt svar var korrekt eller ikke. trykk next for å fortsette spillet ,når alle regenstykkene er besvart vil du få beskjed om det.For å endre antall spørsmål trykk på Preferanser, samt kan du endre språk til tysk.]]></string>
+    <string name="tilbakeText">Er du sikker på at du vil avslutte spillet?</string>
+    <string name="defaultsporsmaal">5</string>
+    <string name="riktigSvarMelding">gratulerer, du har svart riktig.</string>
+    <string name="feilSvarMelding">Beklager feil svar. riktig svar er:</string>
+    <string name="ingenSporsmaal">Det er ikke flere spørsmål. Gå tilbake! </string>
 
     <!-- Strenger for tallknappene -->
     <string name="button_0">0</string>
@@ -59,10 +64,6 @@
 
     <string name="no">no</string>
     <string name="de">de</string>
-    <string name="sv">sv</string>
-    <string name="regel" />
-    <string name="omspill" />
-    <string name="instillinger" />
 
 
 </resources>

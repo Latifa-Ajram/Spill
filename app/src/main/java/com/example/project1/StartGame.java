@@ -39,7 +39,7 @@ public class StartGame extends AppCompatActivity implements MinDialog.MittInterf
 
     public void visDialog(View v)
     {
-        DialogFragment dialog = new MinDialog("Er du sikker på at du vil avslutte spillet?");
+        DialogFragment dialog = new MinDialog(getString(R.string.tilbakeText));
         dialog.show(getSupportFragmentManager(),"Tittel");
     }
     public void svarDialog(View v, String melding)
@@ -55,9 +55,9 @@ public class StartGame extends AppCompatActivity implements MinDialog.MittInterf
         setContentView(R.layout.activity_start_game);
 
         SharedPreferences sharedPreferences = getSharedPreferences("myPref", MODE_PRIVATE);
-
+        int defaultValue = R.string.defaultsporsmaal;
 // Retrieve the number using the same key
-        int receivedNumber = sharedPreferences.getInt("antall", 5);
+        int receivedNumber = sharedPreferences.getInt("antall", defaultValue);
         Log.d("recievednr", String.valueOf(receivedNumber));
 
         editTextAnswer = findViewById(R.id.editTextAnswer);
@@ -88,7 +88,7 @@ public class StartGame extends AppCompatActivity implements MinDialog.MittInterf
                     if (ans.equals(correctAns)) {
                         // For the "Correct" case
                         AlertDialog.Builder builder = new AlertDialog.Builder(StartGame.this);
-                        builder.setTitle("Congratulations. Your Answer is Correct:")
+                        builder.setTitle(getText(R.string.riktigSvarMelding))
                                 .setMessage(math_questions[cQuestionInd] + " = " + correctAns)
                                 .setPositiveButton(R.string.Ja, new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
@@ -101,7 +101,7 @@ public class StartGame extends AppCompatActivity implements MinDialog.MittInterf
                     } else {
                         // For the "Incorrect" case
                         AlertDialog.Builder builder = new AlertDialog.Builder(StartGame.this);
-                        builder.setTitle("Sorry your answer was not correct! Correct answer:")
+                        builder.setTitle(getText(R.string.feilSvarMelding))
                                 .setMessage(math_questions[cQuestionInd] + " = " + correctAns)
                                 .setPositiveButton(R.string.Ja, new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
@@ -138,7 +138,9 @@ public class StartGame extends AppCompatActivity implements MinDialog.MittInterf
 */
                 }
 
-                else { svarDialog(view,"no more Questions to answer! Go back ");}
+                else {
+
+                    svarDialog(view,getText(R.string.ingenSporsmaal).toString());}
 
             }
 
@@ -155,7 +157,7 @@ public class StartGame extends AppCompatActivity implements MinDialog.MittInterf
 
                 if (questions.size() == receivedNumber) {
 
-                    svarDialog(view,"You have answered all questions, go to the main screen");
+                    svarDialog(view,getText(R.string.ingenSporsmaal).toString());
 
 
                     } else {

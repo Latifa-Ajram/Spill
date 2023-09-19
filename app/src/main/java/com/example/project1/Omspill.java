@@ -25,9 +25,9 @@ public class Omspill extends AppCompatActivity {
         omspill = findViewById(R.id.textViewOmspill);
 
 
-                regler.setText(getString(R.string.Hvordan_bruke_spillet));
+                regler.setText(getString(R.string.hvordan_bruke_spillet));
 
-                omspill.setText(getString(R.string.Hvordan_bruke_spillet_beskrivelse));
+                omspill.setText(getString(R.string.hvordan_bruke_spillet_beskrivelse));
 
         Button AvbrytButton = findViewById(R.id.buttonAvbryt);
 
