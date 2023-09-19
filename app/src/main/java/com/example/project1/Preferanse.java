@@ -70,16 +70,6 @@ public class Preferanse extends AppCompatActivity {
             }
         }
 
-
-        Button knappsv = findViewById(R.id.knappsv);
-        knappsv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                LocaleListCompat appLocale = LocaleListCompat.forLanguageTags("sv-SV");
-                AppCompatDelegate.setApplicationLocales(appLocale);
-            }
-        });
-
         Button knappno = findViewById(R.id.knappno);
         knappno.setOnClickListener(new View.OnClickListener() {
             @Override

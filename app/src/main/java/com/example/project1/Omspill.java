@@ -25,14 +25,9 @@ public class Omspill extends AppCompatActivity {
         omspill = findViewById(R.id.textViewOmspill);
 
 
-                regler.setText("Hvordan bruke spillet");
+                regler.setText(getString(R.string.Hvordan_bruke_spillet));
 
-                String om = " " +
-                        "I dette spillet får du opp 5 tilfeldige regnestykker , skriv svaret ditt på " +
-                        "feltet og trykk 'ok' du vil få en tilbakemelding om ditt svar var korrekt eller ikke." +
-                        "trykk 'next' for å fortsette spillet ,når alle regenstykkene er besvart vil du få beskjed om det." +
-                        "For å endre antall spørsmål trykk på 'Preferanser', samt kan du endre språk til tysk ";
-                omspill.setText(" "+ om);
+                omspill.setText(getString(R.string.Hvordan_bruke_spillet_beskrivelse));
 
         Button AvbrytButton = findViewById(R.id.buttonAvbryt);
 

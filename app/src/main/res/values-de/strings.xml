@@ -14,6 +14,15 @@
 
 
 
+    <!-- Strenger for  tekstvisning -->
+    <string name="hint_answer">Bitte hier Ihre Antwort eingeben</string>
+    <string name="default_text_view_text">TextView</string>
+    <string name="Hvordan_bruke_spillet">Wie man das Spiel benutzt</string>
+    <string name="Hvordan_bruke_spillet_beskrivelse"><![CDATA[In diesem Spiel werden Ihnen 5 zufällige Matheaufgaben angezeigt. Geben Sie Ihre Antwort im Feld ein und klicken Sie auf "OK". Sie erhalten eine Rückmeldung, ob Ihre Antwort korrekt war oder nicht. Klicken Sie auf "Weiter", um das Spiel fortzusetzen. Nachdem alle Aufgaben beantwortet wurden, erhalten Sie eine Benachrichtigung. Um die Anzahl der Fragen zu ändern, klicken Sie auf "Einstellungen". Dort können Sie auch die Sprache auf Deutsch umstellen.]]></string>
+
+
+
+
 
 
 

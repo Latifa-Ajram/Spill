@@ -15,9 +15,11 @@
 
 
 
-    <!-- Strenger for hint og tekstvisning -->
+    <!-- Strenger for  tekstvisning -->
     <string name="hint_answer">Please Write Your Answer Here</string>
     <string name="default_text_view_text">TextView</string>
+    <string name="Hvordan_bruke_spillet">Hvordan bruke spillet</string>
+    <string name="Hvordan_bruke_spillet_beskrivelse"><![CDATA[I dette spillet får du opp 5 tilfeldige regnestykker , skriv svaret ditt på feltet og trykk ok du vil få en tilbakemelding om ditt svar var korrekt eller ikke. trykk next for å fortsette spillet ,når alle regenstykkene er besvart vil du få beskjed om det.For å endre antall spørsmål trykk på Preferanser, samt kan du endre språk til tysk.]]></string>
 
     <!-- Strenger for tallknappene -->
     <string name="button_0">0</string>
@@ -54,7 +56,6 @@
 
     <string name="norsk">Norsk</string>
     <string name="tysk">Tysk</string>
-    <string name="svensk">Svensk</string>
 
     <string name="no">no</string>
     <string name="de">de</string>
