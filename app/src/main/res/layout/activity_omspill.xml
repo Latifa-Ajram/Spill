@@ -30,26 +30,25 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:layout_marginTop="20dp"> <!-- Øker toppmargen for å heve teksten -->
+        android:layout_height="549dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"> <!-- Øker toppmargen for å heve teksten -->
 
         <TextView
             android:id="@+id/textViewOmspill"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="376dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_gravity="center"
-            android:lineSpacingExtra="32dp"
-            android:text="@string/omspill"
-            android:textSize="18sp"
-            android:textColor="@color/black"
             android:layout_marginBottom="100dp"
             android:background="@android:color/transparent"
             android:gravity="center_vertical"
-            android:textStyle="bold"/>
-
+            android:lineSpacingExtra="32dp"
+            android:text="@string/omspill"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
