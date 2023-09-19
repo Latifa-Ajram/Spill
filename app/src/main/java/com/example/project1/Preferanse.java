@@ -34,6 +34,7 @@ public class Preferanse extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 antallSp.setText("5");
+                SetPref();
             }
         });
 
@@ -41,6 +42,7 @@ public class Preferanse extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 antallSp.setText("10");
+                SetPref();
             }
         });
 
@@ -48,27 +50,10 @@ public class Preferanse extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 antallSp.setText("15");
+                SetPref();
             }
         });
 
-        String antallValue = antallSp.getText().toString();
-        if (!antallValue.isEmpty()) {
-            try {
-
-                int antall = Integer.parseInt(antallValue);
-
-
-                SharedPreferences sharedPreferences = getSharedPreferences("myPref", MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-
-                editor.putInt("antall", antall);
-                editor.apply();
-                Log.d("SharedPrefs", "antall set to: " + antall);
-                Toast.makeText(Preferanse.this, "Data Saved", Toast.LENGTH_SHORT).show();
-            } catch (NumberFormatException e) {
-
-            }
-        }
 
         Button knappno = findViewById(R.id.knappno);
         knappno.setOnClickListener(new View.OnClickListener() {
@@ -110,4 +95,26 @@ public class Preferanse extends AppCompatActivity {
 
 
     }
+    public void SetPref() {
+        String antallValue = antallSp.getText().toString();
+        if (!antallValue.isEmpty()) {
+            try {
+
+                int antall = Integer.parseInt(antallValue);
+
+
+                SharedPreferences sharedPreferences = getSharedPreferences("myPref", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                editor.putInt("antall", antall);
+                editor.apply();
+                Log.d("SharedPrefs", "antall set to: " + antall);
+                Toast.makeText(Preferanse.this, "Data Saved", Toast.LENGTH_SHORT).show();
+            } catch (NumberFormatException e) {
+
+            }
+        }
+    }
+
+
 }
