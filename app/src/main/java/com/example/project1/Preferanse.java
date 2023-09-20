@@ -19,6 +19,7 @@ import androidx.core.os.LocaleListCompat;
 
 public class Preferanse extends AppCompatActivity {
     TextView antallSp;
+    String valgtspraak="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class Preferanse extends AppCompatActivity {
             public void onClick(View v) {
                 antallSp.setText("5");
                 SetPref();
+
             }
         });
 
@@ -43,6 +45,7 @@ public class Preferanse extends AppCompatActivity {
             public void onClick(View v) {
                 antallSp.setText("10");
                 SetPref();
+
             }
         });
 
@@ -51,6 +54,7 @@ public class Preferanse extends AppCompatActivity {
             public void onClick(View v) {
                 antallSp.setText("15");
                 SetPref();
+
             }
         });
 
@@ -61,6 +65,9 @@ public class Preferanse extends AppCompatActivity {
             public void onClick(View view) {
                 LocaleListCompat appLocale = LocaleListCompat.forLanguageTags("no-No");
                 AppCompatDelegate.setApplicationLocales(appLocale);
+                valgtspraak="no-No";
+                SetPref();
+
             }
         });
 
@@ -70,6 +77,8 @@ public class Preferanse extends AppCompatActivity {
             public void onClick(View view) {
                 LocaleListCompat appLocale = LocaleListCompat.forLanguageTags("de-DE");
                 AppCompatDelegate.setApplicationLocales(appLocale);
+                valgtspraak="de-DE";
+                SetPref();
             }
         });
 
@@ -93,10 +102,11 @@ public class Preferanse extends AppCompatActivity {
 
 
 
-
     }
     public void SetPref() {
         String antallValue = antallSp.getText().toString();
+
+
         if (!antallValue.isEmpty()) {
             try {
 
@@ -107,8 +117,9 @@ public class Preferanse extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
 
                 editor.putInt("antall", antall);
+                editor.putString("valgtspraak", valgtspraak);
                 editor.apply();
-                Log.d("SharedPrefs", "antall set to: " + antall);
+                Log.d("SharedPrefs", "Language set to: " + valgtspraak + ", antall set to: " + antall);
                 Toast.makeText(Preferanse.this, "Data Saved", Toast.LENGTH_SHORT).show();
             } catch (NumberFormatException e) {
 

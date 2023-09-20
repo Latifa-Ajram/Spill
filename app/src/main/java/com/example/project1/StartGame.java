@@ -2,6 +2,8 @@ package com.example.project1;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.os.LocaleListCompat;
 import androidx.fragment.app.DialogFragment;
 
 import android.content.DialogInterface;
@@ -56,9 +58,15 @@ public class StartGame extends AppCompatActivity implements MinDialog.MittInterf
 
         SharedPreferences sharedPreferences = getSharedPreferences("myPref", MODE_PRIVATE);
         int defaultValue = R.string.defaultsporsmaal;
-// Retrieve the number using the same key
+        String valgtspraak=sharedPreferences.getString("valgtspraak","");
+
+//      Retrieve the number using the same key
         int receivedNumber = sharedPreferences.getInt("antall", defaultValue);
         Log.d("recievednr", String.valueOf(receivedNumber));
+        Log.d("SharedPrefs", "Language set to: " + valgtspraak + ", antall set to: " + receivedNumber);
+
+        LocaleListCompat appLocale = LocaleListCompat.forLanguageTags(valgtspraak);
+        AppCompatDelegate.setApplicationLocales(appLocale);
 
         editTextAnswer = findViewById(R.id.editTextAnswer);
         textViewQuestion = findViewById(R.id.textViewQuestion);
