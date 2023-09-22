@@ -24,8 +24,8 @@
     <string name="riktigSvarMelding">gefeliciteerd, je hebt goed geantwoord.</string>
     <string name="feilSvarMelding">Sorry voor het verkeerde antwoord. het juiste antwoord is:</string>
     <string name="ingenSporsmaal">Er zijn geen vragen meer. Ga terug! </string>
-    <string name="velgspraakText">Please choose your language here</string>
-    <string name="velgantallSpText">Please Write Your 5/10/15</string>
+    <string name="velgspraakText">Wähle eine Sprache</string>
+    <string name="velgantallSpText">velgantallSpText</string>
 
 
     <!-- Strenger for tallknappene -->

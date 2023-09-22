@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         start = findViewById(R.id.buttonSpill);
         omspill =findViewById(R.id.buttonOmspill);
         preferanser = findViewById(R.id.buttonPreferanser);

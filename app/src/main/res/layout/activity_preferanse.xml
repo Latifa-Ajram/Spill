@@ -54,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:hint="velgantallSpText"
+            android:text="@string/velgantallSpText"
             android:padding="20dp"
             android:textAlignment="center"
             android:textColor="@color/design_default_color_primary"
