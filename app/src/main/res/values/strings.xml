@@ -25,6 +25,8 @@
     <string name="riktigSvarMelding">gratulerer, du har svart riktig.</string>
     <string name="feilSvarMelding">Beklager feil svar. riktig svar er:</string>
     <string name="ingenSporsmaal">Det er ikke flere spørsmål. Gå tilbake! </string>
+    <string name="velgspraakText">Please choose your language here</string>
+    <string name="velgantallSpText">Please Write Your 5/10/15</string>
 
     <!-- Strenger for tallknappene -->
     <string name="button_0">0</string>
