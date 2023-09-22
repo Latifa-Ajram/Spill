@@ -28,7 +28,7 @@
         android:layout_below="@id/textViewQuestion"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:hint="Please Write Your Answer Here"
+        android:hint="Skriv svaret ditt her"
         android:inputType="number"
         android:textColor="@color/design_default_color_primary"
 

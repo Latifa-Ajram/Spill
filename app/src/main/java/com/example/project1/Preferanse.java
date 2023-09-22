@@ -95,13 +95,6 @@ public class Preferanse extends AppCompatActivity {
         });
 
 
-
-
-
-
-
-
-
     }
     public void SetPref() {
         String antallValue = antallSp.getText().toString();
